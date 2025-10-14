@@ -7,6 +7,7 @@
 
    
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js" defer></script>
 </head>
 <body class="duration-300 ease-in ">
     <div class="container m-auto w-max flex flex-col items-center mt-[10%] font-mono">
@@ -14,40 +15,6 @@
     <div class="bottomcontainer  flex flex-col gap-4"><button id="Start" class="border-2  rounded-2xl p-3 hover:scale-110 transition duration-400 ease-in-out border-black shadow-md hover:shadow-lg">Start</button><button id="Stop"class="border-2  rounded-2xl p-3 hover:scale-110 transition duration-400 ease-in-out border-black shadow-md hover:shadow-lg"  >Stop</button></div>
     
     </div>
-    <script>
-        const clickstart = document.getElementById("Start");
-        const clickstop = document.getElementById("Stop");
-        const min = 0;
-        const max = 255;
-        function generatecolor() {
-            const randomvalue = ()=> Math.floor(Math.random() *256);
-            let red = randomvalue();
-       let green = randomvalue();
-       let blue = randomvalue();
-        const hex = (hexchange)=> hexchange.toString(16).padStart(2,"0");
-
-      
-       const hexcode = `#${hex(red)}${hex(green)}${hex(blue)}`
-       return hexcode;
-        }
-
-       const randomcolor = function (){
-        let getcolor = 0;
-        getcolor = generatecolor();
-        document.body.style.backgroundColor = getcolor;
-       }
-       let startgenerating ;
-     clickstart.addEventListener('click', ()=>{
-        if(!startgenerating){
-            startgenerating = setInterval(randomcolor,1000);
-        }
-        
-       });
-
-       clickstop.addEventListener('click',()=>{
-        clearInterval(startgenerating);
-        startgenerating = null;
-       });
-    </script>
+    
 </body>
 </html>
