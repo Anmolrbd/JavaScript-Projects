@@ -11,10 +11,24 @@ let currentPassword = "";
 
 lengthvalue.textContent = range.value
 decrease.addEventListener('click',()=>{
+    if(lengthvalue.textContent >1){ 
     lengthvalue.textContent--;
+    range.value--;
+    }
+    else{
+        lengthvalue.textContent = 1;
+    }
+    
 })
 increase.addEventListener('click',()=>{
-    lengthvalue.textContent++;
+    if(lengthvalue.textContent <20){
+        lengthvalue.textContent++;
+        range.value++;
+    }else{
+        lengthvalue.textContent = 20;
+    }
+    
+    
 })
 range.addEventListener('input',(event)=>{
     lengthvalue.textContent = event.target.value;
