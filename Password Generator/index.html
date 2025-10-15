@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator`</title>
+    <script src="main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="bg-[#011F3C]">
+    <div class="container mt-[15%] ml-[10%] w-max">
+        <h1 class="text-4xl font-semibold text-white mb-3">Generate a</h1>
+        <h1 class="text-4xl text-green-800 font-semibold ">Random Password</h1>
+        <hr class=" border-t border-green-800 border-2 mb-4 w-[300px] mt-2">
+        <div class="textcontainer relative w-max" id="textcontainer">
+            <input type="text" placeholder="Password" class="mt-5 py-5 w-[550px] rounded pl-5 text-[20px]" id="getpassword"><button id="copybutton"><i class="fa-jelly-duo fa-regular fa-clone fa-rotate-90 bg-white text-2xl absolute right-[2%] bottom-[20%] hover:text-green-400" style="--fa-primary-color: #00ff00; --fa-secondary-color: #ffffff;"></i></button>
+        </div>
+        <div class="selectorcontainer flex justify-between items-center pt-5">
+        <span class="text-white mt-3 text-[20px]">Password length:</span><span id="lengthvalue" class="text-white text-[20px] mt-3"> </span>
+        <div class="buttoncontainer flex justify-around items-center w-[300px]">
+            <button id="decrease" class="w-[45px] h-[45px] text-[20px] px-2 py-1 bg-white text-black rounded-full mt-3 hover:text-white hover:bg-black transition-all duration-200">&lt;</button>
+        <input id="range" type="range" min="1" max="20" step="1" class=" h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer mt-3 ">
+        <button id="increase" class="w-[45px] h-[45px] text-[20px] px-2 py-1 bg-white text-black rounded-full hover:text-white hover:bg-black mt-3 transition-all duration-200 ">&gt;</button>
+        </div>
+        
+        </div>
+       
+        <button class="group text-white bg-green-700 mt-10 py-3 rounded flex items-center gap-1 px-8 hover:bg-green-800 transition-colors" id="generatepassword">
+  <i class="fa-solid fa-bolt text-2xl transition-colors text-white group-hover:text-green-300"></i>
+  Generate Password
+</button>
+        </div>
+        
+    </div>
+</body>
+</html>
