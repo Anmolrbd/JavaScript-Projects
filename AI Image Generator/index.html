@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <script src="main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/src/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+</head>
+<body class="bg-gradient-to-t to-[#E7E9FF] from-[#D2D3FF] font-mono min-h-screen ">
+<div class="container m-auto w-[1000px] mt-[10%] bg-white backdrop-blur-lg border border-white/20 shadow-lg rounded-xl">
+    <div class="headinglines flex justify-between mt-[20px] px-5 text-center">
+        <div class="titlelines flex items-center">
+            <span class="text-[20px] bg-gradient-to-t to-[#6560EA] from-[#8068FF] px-2 py-1 rounded-lg mr-3 "><i class="fa-solid fa-wand-magic-sparkles " style="color:#fff;"></i></span><h1 class="text-4xl font-bold text-black ">AI Image Generator</h1>
+        </div>
+        
+        <button class="bg-[#F1F1FF] rounded-full px-3 py-1 border border-[#E7E9FF] hover:scale-[1.1]"><i class="fa-solid fa-moon" style="color: #808080;"></i></button>
+    </div>
+    <div class="writingpart mt-[50px] px-5 relative">
+        <label for="write"></label>
+        <textarea tabindex="0" id="write" placeholder="Describe your vision..." id="" class="rounded-lg w-[99%] h-[100px] resize-none p-4 text-[17px] bg-[#F1F1FF] border focus:outline-purple-200 focus:outline-none transition-colors duration-300"></textarea><button class=" absolute right-[5%] bg-gradient-to-t to-[#6560EA] from-[#8068FF] w-[30px] h-[30px] rounded-full bottom-[10%] transition-colors duration-300 text-[10px] hover:scale-[1.1] ease-in-out">
+            <i class="fa-solid fa-dice" style="color: #ffffff;"></i>
+        </button>
+    </div>
+    <div class="selectionarea flex items-center relative pb-5">
+<label for="SelectModel" class="px-2"></label>
+    <select name="" id="SelectModel" class="rounded-md ml-1 mt-5 w-[220px] px-3 py-[10px] text-[17px] pl-6">
+        <option value="" selected class="firstmodel">Select Model</option>
+        <option value="FLUX.1-dev">FLUX.1-dev</option>
+        <option value="FLUX.1-Sschnell">FLUX.1-Sschnell</option>
+        <option value="Stable Diffusion XL">Stable Diffusion XL</option>
+        <option value="Stable Diffusion 1.5">Stable Diffusion 1.5</option>
+        <option value="Stable Diffusion 3">Stable Diffusion 3</option>
+        <option value="Openjourney">Openjourney</option>
+    </select>
+    <label for="imagecount"></label>
+    <select name="" id="imagecount" class="rounded-md mt-5 w-[200px] px-3 py-[10px] text-[17px] ml-10">
+        <option value="">Image Count</option>
+        <option value="">1 Image</option>
+        <option value="">2 Images<s/option>
+        <option value="">3 Images</option>
+        <option value="">4 Images</option>
+    </select>
+    <label for=""></label>
+    <select name="" id="" class="rounded-md mt-5 w-[200px] px-3 py-[10px] text-[17px] pl-6 ml-10 mr-10">
+        <option value="Aspect Ratio" selected>Aspect Ratio</option>
+        <option value="Square(1:1)" >Square(1:1)</option>
+        <option value="Landscape(16:9)">Landscape(16:9)</option>
+        <option value="Portrait(9:16)">Portrait(9:16)</option>
+    </select>
+    <button class="rounded-md mt-5 w-[180px] px-2 py-[8px] text-[17px] bg-gradient-to-t to-[#6560EA] from-[#8068FF] text-white absolute right-[3%]">
+        <i class="fa-solid fa-wand-sparkles mr-3"></i>Generate
+    </button>
+    </div>
+    
+</div>
+</body>
+</html>
